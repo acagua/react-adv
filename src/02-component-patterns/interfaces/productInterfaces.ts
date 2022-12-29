@@ -1,4 +1,3 @@
-import { ReactElement } from "react";
 import { ProductButtonProps } from "../components/ProductButtons";
 import { ProductCardProps } from "../components/ProductCard";
 import { ProductImageProps } from "../components/ProductImage";
@@ -21,4 +20,13 @@ export interface ProductCardHOCProps {
   Buttons: (Props: ProductButtonProps) => JSX.Element;
   Image: (Props: ProductImageProps) => JSX.Element;
   Title: (Props: ProductTitleProps) => JSX.Element;
+}
+
+export interface onChangeArgs {
+  product: IProduct;
+  count: number;
+}
+
+export interface ProductInCart extends IProduct {
+  count: number;
 }
